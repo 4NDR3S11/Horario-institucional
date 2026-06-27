@@ -170,7 +170,7 @@ const BASE_API = (function () {
     return ""; // Express lo sirve → rutas relativas funcionan
   }
   // Live Server u otro puerto → apuntar explícitamente al backend
-  return "http://127.0.0.1:8080";
+  return "https://horario-institucional.onrender.com/";
 })();
 
 // ═══════════════════════════════════════════════════════════════════

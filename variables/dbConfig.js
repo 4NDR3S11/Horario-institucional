@@ -10,7 +10,7 @@
  * - El parámetro `ssl` se deja configurado para intentar TLS; si tu servidor no lo requiere, se puede ajustar.
  */
 
-const host = process.env.DB_HOST || "127.0.0.1"; // Host del servidor MySQL; se permite override con variable de entorno para no hardcodear valores.
+const host = process.env.DB_HOST || "https://horario-institucional.onrender.com/"; // Host del servidor MySQL; se permite override con variable de entorno para no hardcodear valores.
 const portRaw = process.env.DB_PORT; // Valor crudo (string) del puerto tomado desde el entorno.
 const port = portRaw && Number.isInteger(Number(portRaw)) ? Number(portRaw) : 3306; // Convierte a número entero seguro; si no es válido, usa 3306 (default MySQL).
 const user = process.env.DB_USER || "root"; // Usuario de BD; parametrizable para distintos entornos (dev/test/prod).
