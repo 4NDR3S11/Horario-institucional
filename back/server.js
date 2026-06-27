@@ -280,8 +280,8 @@ const server = http.createServer(async (req, res) => {
   sendText(res, 404, "No encontrado");
 });
 
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 
-server.listen(PORT, "127.0.0.1", () => {
-  process.stdout.write(`Servidor iniciado en http://127.0.0.1:${PORT}/\n`);
+server.listen(PORT, () => {
+  console.log(`Servidor iniciado en el puerto ${PORT}`);
 });
